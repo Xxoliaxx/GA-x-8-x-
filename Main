@@ -9,21 +9,26 @@ Chlen = 4;
 Pc = 0.6;
 Pm = 0.02;
 Pop = round(rand(PopSize,Chlen));
+
 for gen = 1:MaxGen
 
     TempSize = PopSize;
     TempPop = Pop;
 
-	% Single Point Crossover
+% Single Point Crossover
+
     TempPop = Crossover (PopSize, Chlen, TempSize, TempPop, Pop);
     
-  % Mutation
+% Mutation
+
     TempPop = Mutation (TempPop, TempSize, Chlen, Pm);
            
-	% Fitness 
-	  f = Fitness (TempSize, Chlen, TempPop);
+% Fitness
+ 
+    f = Fitness (TempSize, Chlen, TempPop);
 
-	% Selection
-	  Pop = Selection (PopSize, TempSize, TempPop, f);
+% Selection
+
+   Pop = Selection (PopSize, TempSize, TempPop, f);
       
 end
