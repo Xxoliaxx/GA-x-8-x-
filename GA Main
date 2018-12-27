@@ -29,6 +29,6 @@ for gen = 1:MaxGen
 
 % Selection
 
-   Pop = Selection (PopSize, TempSize, TempPop, f);
+   Pop = SelectionMax (PopSize, TempSize, TempPop, f);
       
 end
