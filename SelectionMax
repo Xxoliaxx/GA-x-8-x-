@@ -1,4 +1,4 @@
-function [Pop] = Selection (PopSize, TempSize, TempPop, f)
+function [Pop] = SelectionMax (PopSize, TempSize, TempPop, f)
 
 for Po = 1:PopSize
             P1 = 1+round (rand* (TempSize - 1));
