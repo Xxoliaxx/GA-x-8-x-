@@ -1,0 +1,11 @@
+function [f] = Fitness (TempSize, Chlen, TempPop)
+
+for i = 1:TempSize
+   	 Temp = 0;
+   	 for j = Chlen:-1:1
+   	     if TempPop(i,j)== 1
+   	         Temp = Temp + 2^(j-1);
+   	     end 
+   	 end
+   	 f(i) = Temp * (8-Temp);
+end
