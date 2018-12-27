@@ -1,0 +1,11 @@
+function [Pop] = Selection (PopSize, TempSize, TempPop, f)
+
+for Po = 1:PopSize
+            P1 = 1+round (rand* (TempSize - 1));
+            P2 = 1+round (rand *(TempSize - 1));
+            if f(P1) > f(P2)
+                Pop(Po,:) = TempPop(P1,:);
+            else
+                Pop(Po,:) = TempPop(P2,:);
+            end
+end
