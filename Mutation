@@ -1,0 +1,13 @@
+function [TempPop] = Mutation (TempPop, TempSize, Chlen, Pm)
+
+for ts = 1:TempSize
+        for cl = 1:Chlen
+         if rand < Pm
+                if TempPop(ts,cl) == 1
+                    TempPop(ts,cl) = 0;
+                else 
+                    TempPop(ts,cl) = 1;
+                end
+          end
+        end
+end
