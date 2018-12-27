@@ -1,0 +1,12 @@
+function [TempPop] = Crossover (PopSize, Chlen, TempSize, TempPop, Pop)
+
+for ps = 1:2:PopSize
+        if rand < 0.6
+            P1 = round ( 1+rand*(PopSize-1));
+            P2 = round ( 1+rand*(PopSize-1));
+            cp = round ( 1+rand*(Chlen-1));
+            TempSize = TempSize + 1;
+            TempPop(TempSize,1:cp) = Pop (P1,1:cp);
+            TempPop(TempSize,cp+1:Chlen) = Pop (P2,cp+1:Chlen);
+        end
+end
